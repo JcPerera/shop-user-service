@@ -3,12 +3,14 @@ package com.shop.userservice.dto;
 public class UserResponseDto {
     private String id;
     private String username;
+    private String email;
     private boolean isAdmin;
     private String img;
 
-    public UserResponseDto(String id, String username, boolean isAdmin, String img) {
+    public UserResponseDto(String id, String username, String email, boolean isAdmin, String img) {
         this.id = id;
         this.username = username;
+        this.email = email;
         this.isAdmin = isAdmin;
         this.img = img;
     }
@@ -45,11 +47,20 @@ public class UserResponseDto {
         this.img = img;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "{"
                 + "                        \"id\":\"" + id + "\""
                 + ",                         \"username\":\"" + username + "\""
+                + ",                         \"email\":\"" + email + "\""
                 + ",                         \"isAdmin\":\"" + isAdmin + "\""
                 + ",                         \"img\":\"" + img + "\""
                 + "}";

@@ -12,15 +12,17 @@ public class User {
     private String id;
     private String username;
     private String password;
+    private String email;
     private boolean isAdmin;
     private String img;
     private Date createdAt;
     private Date updatedAt;
 
-    public User(String id, String username, String password, boolean isAdmin, String img, Date createdAt, Date updatedAt) {
+    public User(String id, String username, String password, String email, boolean isAdmin, String img, Date createdAt, Date updatedAt) {
         this.id = id;
         this.username = username;
         this.password = password;
+        this.email = email;
         this.isAdmin = isAdmin;
         this.img = img;
         this.createdAt = createdAt;
@@ -83,12 +85,21 @@ public class User {
         this.updatedAt = updatedAt;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "{"
                 + "                        \"id\":\"" + id + "\""
                 + ",                         \"username\":\"" + username + "\""
                 + ",                         \"password\":\"" + password + "\""
+                + ",                         \"email\":\"" + email + "\""
                 + ",                         \"isAdmin\":\"" + isAdmin + "\""
                 + ",                         \"img\":\"" + img + "\""
                 + ",                         \"createdAt\":" + createdAt

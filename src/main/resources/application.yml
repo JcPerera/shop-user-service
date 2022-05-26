@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: user-service
+  data:
+    mongodb:
+      uri: mongodb+srv://jcperera:${mongodbPassword}@cluster0.s9fqv.mongodb.net/?retryWrites=true&w=majority
+      database: online-shop
+
+server:
+  port: 8020
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
